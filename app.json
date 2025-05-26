@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "meu-curriculo",
+    "slug": "meu-curriculo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,14 +9,16 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.joanafalcaos.meucurriculo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.joanafalcaos.meucurriculo"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +39,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "681518d8-6067-49cd-912b-a0af3bc00db4"
+      }
+    },
+    "owner": "joanafalcaos",
+    "updates": {
+      "url": "https://u.expo.dev/681518d8-6067-49cd-912b-a0af3bc00db4"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
