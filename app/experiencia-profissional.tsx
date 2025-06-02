@@ -17,7 +17,7 @@ export default function ExperienciaProfissional() {
       <View style={styles.card}>
         <Text style={styles.role}>Estagiária de UX/UI</Text>
         <Text style={styles.company}>Um Telecom</Text>
-        <Text style={styles.period}>27/02/2024 - 02/06/2025</Text>
+        <Text style={styles.period}>Fevereiro de 2024 - Junho de 2025</Text>
         <Text style={styles.description}>
           Participei de projetos focados em melhoria da experiência do usuário, realizando pesquisas, criação de fluxos, wireframes e protótipos no Figma, além de colaborar com o time de desenvolvimento.
         </Text>
@@ -26,7 +26,7 @@ export default function ExperienciaProfissional() {
       <View style={styles.card}>
         <Text style={styles.role}>Social Media</Text>
         <Text style={styles.company}>Chalés Caiçara Serrambi</Text>
-        <Text style={styles.period}>Ano não informado</Text>
+        <Text style={styles.period}>Abril de 2023 - Março de 2025</Text>
         <Text style={styles.description}>
           Responsável pela criação de conteúdo, planejamento de postagens, análise de métricas e fortalecimento da presença digital da marca em redes sociais.
         </Text>
@@ -35,7 +35,7 @@ export default function ExperienciaProfissional() {
       <View style={styles.card}>
         <Text style={styles.role}>Assistente Administrativa</Text>
         <Text style={styles.company}>RM Terceirização</Text>
-        <Text style={styles.period}>Ano não informado</Text>
+        <Text style={styles.period}>Abril de 2023 - Fevereiro de 2024</Text>
         <Text style={styles.description}>
           Auxiliei nos processos administrativos, controle de documentos, atendimento e suporte aos setores internos da empresa.
         </Text>
