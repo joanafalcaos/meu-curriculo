@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import {
     Alert,
     FlatList,
+    Keyboard,
     KeyboardAvoidingView,
     Platform,
     StyleSheet,
     Text,
     TextInput,
     TouchableOpacity,
+    TouchableWithoutFeedback,
     View,
 } from 'react-native';
 
@@ -81,64 +83,65 @@ export default function Jogo() {
   };
 
   return (
-    <KeyboardAvoidingView
-      style={styles.container}
-      behavior={Platform.select({ ios: 'padding', android: undefined })}
-    >
-      <Text style={styles.title}>Jogo Senha (Bulls and Cows)</Text>
-
-      <FlatList
-        data={history}
-        keyExtractor={(_, index) => index.toString()}
-        renderItem={({ item, index }) => (
-          <View style={styles.attemptItem}>
-            <Text style={styles.attemptText}>
-              Tentativa {history.length - index}: {item.guess} — 
-              <Text style={styles.result}> {item.bulls} Bulls, {item.cows} Cows</Text>
-            </Text>
-          </View>
-        )}
-        style={styles.historyList}
-        inverted // para a lista ficar reversa
-      />
-
-      {!gameOver && (
-        <>
-          <TextInput
-            style={styles.input}
-            value={guess}
-            onChangeText={(text) =>
-              // permite só números e maxLength
-              setGuess(text.replace(/[^0-9]/g, '').slice(0, DIGIT_COUNT))
-            }
-            keyboardType="numeric"
-            placeholder={`Digite ${DIGIT_COUNT} dígitos únicos`}
-            maxLength={DIGIT_COUNT}
-            editable={!gameOver}
-          />
-          <TouchableOpacity style={styles.button} onPress={handleGuess}>
-            <Text style={styles.buttonText}>Enviar</Text>
-          </TouchableOpacity>
-        </>
-      )}
-
-      <TouchableOpacity
-        style={[styles.button, { backgroundColor: '#7B4DEB', marginTop: 10 }]}
-        onPress={handleShowSecret}
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <KeyboardAvoidingView
+        style={styles.container}
+        behavior={Platform.select({ ios: 'padding', android: undefined })}
       >
-        <Text style={styles.buttonText}>Mostrar Senha</Text>
-      </TouchableOpacity>
+        <Text style={styles.title}>Jogo Senha (Bulls and Cows)</Text>
 
-      {gameOver && (
-        <>
-          <Text style={styles.message}>{message}</Text>
-          <TouchableOpacity style={styles.button} onPress={handleRestart}>
-            <Text style={styles.buttonText}>Jogar Novamente</Text>
-          </TouchableOpacity>
-        </>
-      )}
-    </KeyboardAvoidingView>
-  );
+        <FlatList
+          data={history}
+          keyExtractor={(_, index) => index.toString()}
+          renderItem={({ item, index }) => (
+            <View style={styles.attemptItem}>
+              <Text style={styles.attemptText}>
+                Tentativa {history.length - index}: {item.guess} — 
+                <Text style={styles.result}> {item.bulls} Bulls, {item.cows} Cows</Text>
+              </Text>
+            </View>
+          )}
+          style={styles.historyList}
+          inverted
+        />
+
+        {!gameOver && (
+          <>
+            <TextInput
+              style={styles.input}
+              value={guess}
+              onChangeText={(text) =>
+                setGuess(text.replace(/[^0-9]/g, '').slice(0, DIGIT_COUNT))
+              }
+              keyboardType="numeric"
+              placeholder={`Digite ${DIGIT_COUNT} dígitos únicos`}
+              maxLength={DIGIT_COUNT}
+              editable={!gameOver}
+            />
+            <TouchableOpacity style={styles.button} onPress={handleGuess}>
+              <Text style={styles.buttonText}>Enviar</Text>
+            </TouchableOpacity>
+          </>
+        )}
+
+        <TouchableOpacity
+          style={[styles.button, { backgroundColor: '#7B4DEB', marginTop: 10 }]}
+          onPress={handleShowSecret}
+        >
+          <Text style={styles.buttonText}>Mostrar Senha</Text>
+        </TouchableOpacity>
+
+        {gameOver && (
+          <>
+            <Text style={styles.message}>{message}</Text>
+            <TouchableOpacity style={styles.button} onPress={handleRestart}>
+              <Text style={styles.buttonText}>Jogar Novamente</Text>
+            </TouchableOpacity>
+          </>
+        )}
+      </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
+      );
 }
 
 const styles = StyleSheet.create({
