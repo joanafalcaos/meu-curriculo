@@ -12,9 +12,18 @@ export default function ExperienciaAcademica() {
           Atualmente, curso Sistemas para Internet com foco em desenvolvimento web, mobile e experiência do usuário. Aprendizado em linguagens como JavaScript e Java, além de metodologias de design, prototipação e gestão de projetos.
         </Text>
       </View>
+
+      <View style={styles.card}>
+        <Text style={styles.course}>Bacharelado em Letras</Text>
+        <Text style={styles.institution}>Universidade Federal de Pernambuco</Text>
+        <Text style={styles.description}>
+          Cursado de 2020 a 2023, quando tranquei o curso. A formação em Letras contribuiu significativamente para minhas habilidades de escrita, comunicação e pensamento crítico, fortalecendo a minha capacidade de expressão em projetos digitais e interfaces.
+        </Text>
+      </View>
     </ScrollView>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
