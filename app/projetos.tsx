@@ -1,4 +1,4 @@
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function Projetos() {
   return (
@@ -18,9 +18,6 @@ export default function Projetos() {
             O aplicativo permite que usuários agendem vacinas na Região Metropolitana do Recife, 
             além de possibilitar que os postos de saúde registrem e gerenciem as vacinas disponíveis.
           </Text>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Explorar Projeto</Text>
-          </TouchableOpacity>
         </View>
       </View>
 
@@ -37,9 +34,6 @@ export default function Projetos() {
             A plataforma reúne as principais informações sobre processos e também conecta os dados pessoais 
             e profissionais de forma prática e organizada.
           </Text>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Explorar Projeto</Text>
-          </TouchableOpacity>
         </View>
       </View>
 
@@ -55,9 +49,6 @@ export default function Projetos() {
             PedVeg é um protótipo idealizado como um “iFood vegano”, onde é possível listar todos os restaurantes veganos da região, 
             fazer pedidos e ainda descobrir novas opções veganas em sua cidade.
           </Text>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Explorar Projeto</Text>
-          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
