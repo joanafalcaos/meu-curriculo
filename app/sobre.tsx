@@ -14,7 +14,7 @@ const tecnologias = [
   {
     nome: 'Expo',
     descricao: 'Ambiente para apps React Native',
-    imagem: require('../assets/images/tecnologias/expo.png'),
+    imagem: require('../assets/images/tecnologias/expo.jpeg'),
   },
 ];
 
