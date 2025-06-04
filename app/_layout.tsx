@@ -27,7 +27,13 @@ export default function RootLayout() {
           fontWeight: 'bold',
           color: 'white',
         },
-        headerShown: false,
+        headerStyle: {
+          backgroundColor: '#9575cd',
+        },
+        headerTintColor: 'white',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
         tabBarIcon: ({ focused, color, size }) => {
           let iconName: keyof typeof Ionicons.glyphMap = 'home';
 
@@ -42,12 +48,36 @@ export default function RootLayout() {
         },
       })}
     >
-      <Tab.Screen name="Home" component={Home} options={{ tabBarLabel: 'Home' }} />
-      <Tab.Screen name="Sobre" component={Sobre} options={{ tabBarLabel: 'Sobre' }} />
-      <Tab.Screen name="ExperienciaAcad" component={ExperienciaAcademica} options={{ tabBarLabel: 'Acadêmica' }} />
-      <Tab.Screen name="ExperienciaProf" component={ExperienciaProfissional} options={{ tabBarLabel: 'Profissional' }} />
-      <Tab.Screen name="Jogo" component={Jogo} options={{ tabBarLabel: 'Jogo' }} />
-      <Tab.Screen name="Projetos" component={Projetos} options={{ tabBarLabel: 'Projetos' }} />
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{ tabBarLabel: 'Home', headerTitle: 'Página Inicial' }}
+      />
+      <Tab.Screen
+        name="Sobre"
+        component={Sobre}
+        options={{ tabBarLabel: 'Sobre', headerTitle: 'Sobre Mim' }}
+      />
+      <Tab.Screen
+        name="ExperienciaAcad"
+        component={ExperienciaAcademica}
+        options={{ tabBarLabel: 'Acadêmica', headerTitle: 'Experiência Acadêmica' }}
+      />
+      <Tab.Screen
+        name="ExperienciaProf"
+        component={ExperienciaProfissional}
+        options={{ tabBarLabel: 'Profissional', headerTitle: 'Experiência Profissional' }}
+      />
+      <Tab.Screen
+        name="Jogo"
+        component={Jogo}
+        options={{ tabBarLabel: 'Jogo', headerTitle: 'Jogo Bulls & Cows' }}
+      />
+      <Tab.Screen
+        name="Projetos"
+        component={Projetos}
+        options={{ tabBarLabel: 'Projetos', headerTitle: 'Meus Projetos' }}
+      />
     </Tab.Navigator>
   );
 }

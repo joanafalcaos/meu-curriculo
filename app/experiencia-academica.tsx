@@ -3,8 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 export default function ExperienciaAcademica() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Experiência Acadêmica</Text>
-
+      {/* Conteúdo */}
       <View style={styles.card}>
         <Text style={styles.course}>Sistemas para Internet</Text>
         <Text style={styles.institution}>Universidade Católica de Pernambuco</Text>
@@ -24,12 +23,24 @@ export default function ExperienciaAcademica() {
   );
 }
 
-
 const styles = StyleSheet.create({
   container: {
     padding: 24,
     backgroundColor: '#fff',
     flexGrow: 1,
+  },
+  header: {
+    backgroundColor: '#9575cd',
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+    borderBottomLeftRadius: 16,
+    borderBottomRightRadius: 16,
+    marginBottom: 16,
+  },
+  headerTitle: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   title: {
     fontSize: 28,
