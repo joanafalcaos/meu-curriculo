@@ -56,7 +56,7 @@ export default function RootLayout() {
       <Tab.Screen
         name="Sobre"
         component={Sobre}
-        options={{ tabBarLabel: 'Sobre', headerTitle: 'Sobre Mim' }}
+        options={{ tabBarLabel: 'Sobre', headerTitle: 'Sobre' }}
       />
       <Tab.Screen
         name="ExperienciaAcad"
@@ -71,7 +71,7 @@ export default function RootLayout() {
       <Tab.Screen
         name="Jogo"
         component={Jogo}
-        options={{ tabBarLabel: 'Jogo', headerTitle: 'Jogo Bulls & Cows' }}
+        options={{ tabBarLabel: 'Jogo', headerTitle: 'Jogo Senha' }}
       />
       <Tab.Screen
         name="Projetos"
